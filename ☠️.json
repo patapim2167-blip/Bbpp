@@ -1,0 +1,281 @@
+{
+  "version": "1.0",
+  "note": "Top popular devices seed list (expandable 300-500+)",
+  "devices": [
+    {
+      "id": 1,
+      "brand": "Samsung",
+      "model": "Galaxy A10",
+      "chipset": "Exynos 7884",
+      "ram": 2,
+      "gpu": "Mali-G71",
+      "tier": "low"
+    },
+    {
+      "id": 2,
+      "brand": "Samsung",
+      "model": "Galaxy A20",
+      "chipset": "Exynos 7884",
+      "ram": 3,
+      "gpu": "Mali-G71",
+      "tier": "low"
+    },
+    {
+      "id": 3,
+      "brand": "Samsung",
+      "model": "Galaxy A30",
+      "chipset": "Exynos 7904",
+      "ram": 3,
+      "gpu": "Mali-G71 MP2",
+      "tier": "low"
+    },
+    {
+      "id": 4,
+      "brand": "Samsung",
+      "model": "Galaxy A50",
+      "chipset": "Exynos 9610",
+      "ram": 4,
+      "gpu": "Mali-G72 MP3",
+      "tier": "mid"
+    },
+    {
+      "id": 5,
+      "brand": "Samsung",
+      "model": "Galaxy A51",
+      "chipset": "Exynos 9611",
+      "ram": 4,
+      "gpu": "Mali-G72 MP3",
+      "tier": "mid"
+    },
+    {
+      "id": 6,
+      "brand": "Samsung",
+      "model": "Galaxy A52",
+      "chipset": "Snapdragon 720G",
+      "ram": 6,
+      "gpu": "Adreno 618",
+      "tier": "mid"
+    },
+    {
+      "id": 7,
+      "brand": "Samsung",
+      "model": "Galaxy A73",
+      "chipset": "Snapdragon 778G",
+      "ram": 8,
+      "gpu": "Adreno 642L",
+      "tier": "mid"
+    },
+
+    {
+      "id": 8,
+      "brand": "Xiaomi",
+      "model": "Redmi 9A",
+      "chipset": "Helio G25",
+      "ram": 2,
+      "gpu": "PowerVR GE8320",
+      "tier": "low"
+    },
+    {
+      "id": 9,
+      "brand": "Xiaomi",
+      "model": "Redmi 9C",
+      "chipset": "Helio G35",
+      "ram": 3,
+      "gpu": "PowerVR GE8320",
+      "tier": "low"
+    },
+    {
+      "id": 10,
+      "brand": "Xiaomi",
+      "model": "Redmi Note 8",
+      "chipset": "Snapdragon 665",
+      "ram": 4,
+      "gpu": "Adreno 610",
+      "tier": "low-mid"
+    },
+    {
+      "id": 11,
+      "brand": "Xiaomi",
+      "model": "Redmi Note 9",
+      "chipset": "Helio G85",
+      "ram": 4,
+      "gpu": "Mali-G52 MC2",
+      "tier": "mid"
+    },
+    {
+      "id": 12,
+      "brand": "Xiaomi",
+      "model": "Redmi Note 10",
+      "chipset": "Snapdragon 678",
+      "ram": 4,
+      "gpu": "Adreno 612",
+      "tier": "mid"
+    },
+    {
+      "id": 13,
+      "brand": "Xiaomi",
+      "model": "Redmi Note 11",
+      "chipset": "Snapdragon 680",
+      "ram": 4,
+      "gpu": "Adreno 610",
+      "tier": "mid"
+    },
+    {
+      "id": 14,
+      "brand": "Xiaomi",
+      "model": "Poco X3 NFC",
+      "chipset": "Snapdragon 732G",
+      "ram": 6,
+      "gpu": "Adreno 618",
+      "tier": "mid"
+    },
+    {
+      "id": 15,
+      "brand": "Xiaomi",
+      "model": "Poco X3 Pro",
+      "chipset": "Snapdragon 860",
+      "ram": 8,
+      "gpu": "Adreno 640",
+      "tier": "high"
+    },
+
+    {
+      "id": 16,
+      "brand": "Oppo",
+      "model": "A5 2020",
+      "chipset": "Snapdragon 665",
+      "ram": 3,
+      "gpu": "Adreno 610",
+      "tier": "low-mid"
+    },
+    {
+      "id": 17,
+      "brand": "Oppo",
+      "model": "A54",
+      "chipset": "Helio P35",
+      "ram": 4,
+      "gpu": "PowerVR GE8320",
+      "tier": "low"
+    },
+    {
+      "id": 18,
+      "brand": "Oppo",
+      "model": "A74",
+      "chipset": "Snapdragon 662",
+      "ram": 6,
+      "gpu": "Adreno 610",
+      "tier": "mid"
+    },
+    {
+      "id": 19,
+      "brand": "Oppo",
+      "model": "Reno 5",
+      "chipset": "Snapdragon 720G",
+      "ram": 8,
+      "gpu": "Adreno 618",
+      "tier": "mid"
+    },
+
+    {
+      "id": 20,
+      "brand": "Vivo",
+      "model": "Y12s",
+      "chipset": "Helio P35",
+      "ram": 3,
+      "gpu": "PowerVR GE8320",
+      "tier": "low"
+    },
+    {
+      "id": 21,
+      "brand": "Vivo",
+      "model": "Y20",
+      "chipset": "Snapdragon 460",
+      "ram": 4,
+      "gpu": "Adreno 610",
+      "tier": "low-mid"
+    },
+    {
+      "id": 22,
+      "brand": "Vivo",
+      "model": "Y21",
+      "chipset": "Helio P35",
+      "ram": 4,
+      "gpu": "PowerVR GE8320",
+      "tier": "low"
+    },
+    {
+      "id": 23,
+      "brand": "Vivo",
+      "model": "V20",
+      "chipset": "Snapdragon 720G",
+      "ram": 8,
+      "gpu": "Adreno 618",
+      "tier": "mid"
+    },
+
+    {
+      "id": 24,
+      "brand": "Realme",
+      "model": "C11",
+      "chipset": "Helio G35",
+      "ram": 2,
+      "gpu": "PowerVR GE8320",
+      "tier": "low"
+    },
+    {
+      "id": 25,
+      "brand": "Realme",
+      "model": "C21Y",
+      "chipset": "Unisoc T610",
+      "ram": 3,
+      "gpu": "Mali-G52",
+      "tier": "low"
+    },
+    {
+      "id": 26,
+      "brand": "Realme",
+      "model": "Narzo 50A",
+      "chipset": "Helio G85",
+      "ram": 4,
+      "gpu": "Mali-G52 MC2",
+      "tier": "mid"
+    },
+    {
+      "id": 27,
+      "brand": "Realme",
+      "model": "6 Pro",
+      "chipset": "Snapdragon 720G",
+      "ram": 8,
+      "gpu": "Adreno 618",
+      "tier": "mid"
+    },
+
+    {
+      "id": 28,
+      "brand": "Apple",
+      "model": "iPhone 7",
+      "chipset": "Apple A10",
+      "ram": 2,
+      "gpu": "PowerVR GT7600",
+      "tier": "low"
+    },
+    {
+      "id": 29,
+      "brand": "Apple",
+      "model": "iPhone 8",
+      "chipset": "Apple A11",
+      "ram": 2,
+      "gpu": "Apple GPU 3-core",
+      "tier": "low-mid"
+    },
+    {
+      "id": 30,
+      "brand": "Apple",
+      "model": "iPhone X",
+      "chipset": "Apple A11",
+      "ram": 3,
+      "gpu": "Apple GPU 3-core",
+      "tier": "mid"
+    }
+  ]
+}
