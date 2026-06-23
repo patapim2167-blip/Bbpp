@@ -2,202 +2,103 @@ const result=document.getElementById("result");
 
 async function analyzePhone(){
 
-const phone=document
+const phone=
+
+document
+
 .getElementById("phone")
-.value
-.trim();
+
+.value.trim();
 
 if(!phone){
 
-result.innerHTML=`
-
-<div class="result-card">
-
-⚠️ Hãy nhập tên điện thoại
-
-</div>
-
-`;
-
 return;
 
 }
+
+result.innerHTML=
+
+`<div class="result-card">
+
+🔍 Đang tìm kiếm...
+
+</div>`;
 
 try{
 
-const files=[
-
-"samsung.json",
-
-"xiaomi.json",
-
-"iphone.json"
-
-];
-
-let database={};
-
-for(const file of files){
-
 const response=
 
-await fetch(file);
+await fetch(
 
-const data=
+`https://api-mobilespecs.azharimm.dev/v2/search?query=${encodeURIComponent(phone)}`
+
+);
+
+const api=
 
 await response.json();
 
-database={
+if(
 
-...database,
+!api.data ||
 
-...data
+api.data.phones.length===0
 
-};
+){
 
-}
+result.innerHTML=
 
-const data=
+`<div class="result-card">
 
-database[phone];
+❌ Không tìm thấy dữ liệu
 
-if(!data){
-
-result.innerHTML=`
-
-<div class="result-card">
-
-❌ Chưa có dữ liệu của ${phone}
-
-</div>
-
-`;
+</div>`;
 
 return;
 
 }
 
-showResult(phone,data);
+const item=
 
-}
+api.data.phones[0];
 
-catch(e){
+result.innerHTML=
 
-result.innerHTML=`
-
-<div class="result-card">
-
-❌ Lỗi đọc file JSON
-
-</div>
-
-`;
-
-}
-
-}
-
-function showResult(phone,data){
-
-let general=190;
-
-let redDot=185;
-
-let scope2=175;
-
-let scope4=165;
-
-let awm=80;
-
-let freeLook=200;
-
-let dpi=520;
-
-let fire=56;
-
-if(data.hz>=120){
-
-general=195;
-
-redDot=190;
-
-scope2=180;
-
-scope4=170;
-
-awm=85;
-
-dpi=560;
-
-fire=52;
-
-}
-
-result.innerHTML=`
+`
 
 <div class="result-card">
 
-📱 ${phone}
+📱 ${item.phone_name}
 
 </div>
 
 <div class="result-card">
 
-🧠 CPU: ${data.cpu}
+🏢 ${item.brand}
 
 </div>
 
 <div class="result-card">
 
-💾 RAM: ${data.ram}GB
+📅 ${item.detail}
 
 </div>
 
 <div class="result-card">
 
-📺 ${data.hz}Hz
+🎯 Gợi ý độ nhạy: Thử từ 180-195
 
 </div>
 
 <div class="result-card">
 
-🎯 Độ nhạy đề xuất
-
-<br><br>
-
-Tổng quan: ${general}
-
-<br>
-
-Red Dot: ${redDot}
-
-<br>
-
-2X: ${scope2}
-
-<br>
-
-4X: ${scope4}
-
-<br>
-
-AWM: ${awm}
-
-<br>
-
-Nhìn xung quanh: ${freeLook}
+🖱️ DPI gợi ý: 520-560
 
 </div>
 
 <div class="result-card">
 
-🖱️ DPI: ${dpi}
-
-</div>
-
-<div class="result-card">
-
-🔘 Nút bắn: ${fire}%
+🔘 Nút bắn gợi ý: 50%-60%
 
 </div>
 
@@ -225,18 +126,32 @@ Bóng đổ: Tắt
 
 <br><br>
 
-🔕 Không làm phiền: Bật
-
-<br>
-
 🔋 Tắt tiết kiệm pin
 
 <br>
 
 🧹 Đóng ứng dụng nền
 
+<br>
+
+🔕 Không làm phiền: Bật
+
 </div>
 
 `;
+
+}
+
+catch{
+
+result.innerHTML=
+
+`<div class="result-card">
+
+❌ Lỗi kết nối API
+
+</div>`;
+
+}
 
 }
