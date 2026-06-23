@@ -1,157 +1,63 @@
-const result=document.getElementById("result");
+let devices=[];
 
-async function analyzePhone(){
+fetch("devices.json")
 
-const phone=
+.then(res=>res.json())
 
-document
+.then(data=>{
 
-.getElementById("phone")
+devices=data.devices;
 
-.value.trim();
+})
 
-if(!phone){
+.catch(()=>{
 
-return;
+document.getElementById("result").innerHTML="Lỗi đọc dữ liệu";
 
-}
+});
 
-result.innerHTML=
+function searchPhone(){
 
-`<div class="result-card">
+let keyword=document.getElementById("searchInput")
 
-🔍 Đang tìm kiếm...
+.value.toLowerCase();
 
-</div>`;
+let result=document.getElementById("result");
 
-try{
+let found=devices.find(d=>
 
-const response=
-
-await fetch(
-
-`https://api-mobilespecs.azharimm.dev/v2/search?query=${encodeURIComponent(phone)}`
+d.model.toLowerCase().includes(keyword)
 
 );
 
-const api=
+if(!found){
 
-await response.json();
-
-if(
-
-!api.data ||
-
-api.data.phones.length===0
-
-){
-
-result.innerHTML=
-
-`<div class="result-card">
-
-❌ Không tìm thấy dữ liệu
-
-</div>`;
+result.innerHTML="Không tìm thấy";
 
 return;
 
 }
 
-const item=
-
-api.data.phones[0];
-
-result.innerHTML=
-
-`
+result.innerHTML=`
 
 <div class="result-card">
 
-📱 ${item.phone_name}
-
-</div>
-
-<div class="result-card">
-
-🏢 ${item.brand}
-
-</div>
-
-<div class="result-card">
-
-📅 ${item.detail}
-
-</div>
-
-<div class="result-card">
-
-🎯 Gợi ý độ nhạy: Thử từ 180-195
-
-</div>
-
-<div class="result-card">
-
-🖱️ DPI gợi ý: 520-560
-
-</div>
-
-<div class="result-card">
-
-🔘 Nút bắn gợi ý: 50%-60%
-
-</div>
-
-<div class="result-card">
-
-🎮 Setting game
+📱 ${found.brand} ${found.model}
 
 <br><br>
 
-Đồ họa: Mượt
+⚙️ ${found.chipset}
 
 <br>
 
-FPS: Cao
+💾 ${found.ram}GB RAM
 
 <br>
 
-Bóng đổ: Tắt
-
-</div>
-
-<div class="result-card">
-
-📱 Setting máy
-
-<br><br>
-
-🔋 Tắt tiết kiệm pin
-
-<br>
-
-🧹 Đóng ứng dụng nền
-
-<br>
-
-🔕 Không làm phiền: Bật
+🏆 ${found.tier}
 
 </div>
 
 `;
-
-}
-
-catch{
-
-result.innerHTML=
-
-`<div class="result-card">
-
-❌ Lỗi kết nối API
-
-</div>`;
-
-}
 
 }
