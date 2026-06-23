@@ -1,106 +1,27 @@
-const result = document.getElementById("result");
-
-const historyKey = "ghw_history";
-
-const database = {
-
-"Samsung A71":{
-
-cpu:"Snapdragon 730",
-
-ram:"8GB",
-
-hz:"60Hz"
-
-},
-
-"Samsung A55":{
-
-cpu:"Exynos 1480",
-
-ram:"8GB",
-
-hz:"120Hz"
-
-},
-
-"iPhone 13":{
-
-cpu:"Apple A15 Bionic",
-
-ram:"4GB",
-
-hz:"60Hz"
-
-},
-
-"Redmi Note 13":{
-
-cpu:"Snapdragon 685",
-
-ram:"8GB",
-
-hz:"120Hz"
-
-}
-
-};
-
-document
-
-.getElementById("searchBtn")
-
-.addEventListener(
-
-"click",
-
-analyzePhone
-
-);
-
-function analyzePhone(){
-
-const phone=
-
-document
-
-.getElementById("phone")
-
-.value.trim();
-
-if(!phone){
-
-result.innerHTML=
-
-`<div class="result-card">
-
-⚠️ Hãy nhập tên điện thoại.
-
-</div>`;
-
-return;
-
-}
-
-const data=
-
-database[phone];
-
-saveHistory(phone);
-
-if(data){
-
-showResult(phone,data);
-
-}else{
-
-showUnknown(phone);
-
-}
-
-}
-
 function showResult(phone,data){
+
+let dpi=520;
+let fire=56;
+
+let general=190;
+let redDot=185;
+let scope2=175;
+let scope4=160;
+let awm=80;
+let freeLook=200;
+
+if(data.hz>=120){
+
+dpi=560;
+fire=52;
+
+general=195;
+redDot=190;
+scope2=180;
+scope4=170;
+awm=85;
+
+}
 
 result.innerHTML=`
 
@@ -118,84 +39,98 @@ result.innerHTML=`
 
 <div class="result-card">
 
-💾 RAM: ${data.ram}
+💾 RAM: ${data.ram}GB
 
 </div>
 
 <div class="result-card">
 
-📺 Màn hình: ${data.hz}
+📺 Màn hình: ${data.hz}Hz
 
 </div>
 
 <div class="result-card">
 
-🎯 Cấu hình được đề xuất theo thiết bị.
+🎯 Độ nhạy đề xuất
+
+<br><br>
+
+Tổng quan: ${general}
+
+<br>
+
+Red Dot: ${redDot}
+
+<br>
+
+2x: ${scope2}
+
+<br>
+
+4x: ${scope4}
+
+<br>
+
+AWM: ${awm}
+
+<br>
+
+Nhìn xung quanh: ${freeLook}
 
 </div>
 
 <div class="result-card">
 
-⚙️ Bạn có thể mở rộng dữ liệu sau này.
+🖱️ DPI: ${dpi}
+
+</div>
+
+<div class="result-card">
+
+🔘 Nút bắn: ${fire}%
+
+</div>
+
+<div class="result-card">
+
+🎮 Setting game
+
+<br><br>
+
+Đồ họa: Mượt
+
+<br>
+
+FPS: Cao
+
+<br>
+
+Độ phân giải: Tiêu chuẩn
+
+</div>
+
+<div class="result-card">
+
+📱 Setting máy
+
+<br><br>
+
+🔋 Tiết kiệm pin: Tắt
+
+<br>
+
+🌙 Độ sáng: 75%
+
+<br>
+
+🔕 Không làm phiền: Bật
+
+<br>
+
+🧹 Đóng ứng dụng nền trước khi chơi
 
 </div>
 
 `;
-
-}
-
-function showUnknown(phone){
-
-result.innerHTML=`
-
-<div class="result-card">
-
-📱 ${phone}
-
-</div>
-
-<div class="result-card">
-
-❓ Chưa có dữ liệu.
-
-</div>
-
-`;
-
-}
-
-function saveHistory(phone){
-
-let history=
-
-JSON.parse(
-
-localStorage.getItem(
-
-historyKey
-
-)
-
-)||[];
-
-history=
-
-history.filter(
-
-v=>v!==phone
-
-);
-
-history.unshift(phone);
-
-history=history.slice(0,5);
-
-localStorage.setItem(
-
-historyKey,
-
-JSON.stringify(history)
-
-);
 
 }
