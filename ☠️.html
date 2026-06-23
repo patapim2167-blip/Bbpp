@@ -1,43 +1,32 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>GIA HUY × WEB</title>
+<title>Thiết bị</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<div class="bg"></div>
+<h1>Tra cứu thiết bị</h1>
 
-<div class="container">
+<input id="searchInput" placeholder="Nhập tên điện thoại">
 
-<h1>⚡ GIA HUY × WEB</h1>
-
-<p>AI Device Analyzer</p>
-
-<input
-id="phone"
-placeholder="Ví dụ: Samsung A71">
-
-<button onclick="analyzePhone()">
-
-🚀 PHÂN TÍCH
-
+<button onclick="searchPhone()">
+Tìm kiếm
 </button>
 
 <div id="result"></div>
 
-</div>
+<audio id="bgm" loop>
+<source src="nhac.mp3">
+</audio>
 
 <script src="app.js"></script>
 
 </body>
-
 </html>
