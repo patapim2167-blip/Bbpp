@@ -1,27 +1,41 @@
-Redmi Note 10
-Redmi Note 11
-Redmi Note 12
-Redmi Note 13
-Redmi Note 14
+{
+  "Xiaomi 11":{"cpu":"Snapdragon 888","ram":8,"hz":120},
+  "Xiaomi 11 Lite 5G NE":{"cpu":"Snapdragon 778G","ram":8,"hz":90},
 
-POCO X3 Pro
-POCO X5 Pro
-POCO X6 Pro
+  "Xiaomi 12":{"cpu":"Snapdragon 8 Gen 1","ram":8,"hz":120},
+  "Xiaomi 12 Lite":{"cpu":"Snapdragon 778G","ram":8,"hz":120},
+  "Xiaomi 12 Pro":{"cpu":"Snapdragon 8 Gen 1","ram":12,"hz":120},
+  "Xiaomi 12T":{"cpu":"Dimensity 8100 Ultra","ram":8,"hz":120},
+  "Xiaomi 12T Pro":{"cpu":"Snapdragon 8+ Gen 1","ram":12,"hz":120},
 
-Xiaomi 12
-Xiaomi 13
-Xiaomi 14
+  "Xiaomi 13":{"cpu":"Snapdragon 8 Gen 2","ram":12,"hz":120},
+  "Xiaomi 13 Lite":{"cpu":"Snapdragon 7 Gen 1","ram":8,"hz":120},
+  "Xiaomi 13 Pro":{"cpu":"Snapdragon 8 Gen 2","ram":12,"hz":120},
+  "Xiaomi 13T":{"cpu":"Dimensity 8200 Ultra","ram":12,"hz":144},
+  "Xiaomi 13T Pro":{"cpu":"Dimensity 9200+","ram":16,"hz":144},
 
-Realme 9
-Realme 10
-Realme 11
-Realme 12
+  "Xiaomi 14":{"cpu":"Snapdragon 8 Gen 3","ram":12,"hz":120},
+  "Xiaomi 14 Ultra":{"cpu":"Snapdragon 8 Gen 3","ram":16,"hz":120},
 
-Vivo V29
-Vivo V30
-Vivo V40
+  "Redmi 12":{"cpu":"Helio G88","ram":8,"hz":90},
+  "Redmi 13":{"cpu":"Helio G91 Ultra","ram":8,"hz":90},
+  "Redmi 14C":{"cpu":"Helio G81 Ultra","ram":8,"hz":120},
 
-Oppo Reno 10
-Oppo Reno 11
-Oppo Reno 12
+  "Redmi Note 10":{"cpu":"Snapdragon 678","ram":6,"hz":60},
+  "Redmi Note 11":{"cpu":"Snapdragon 680","ram":6,"hz":90},
+  "Redmi Note 12":{"cpu":"Snapdragon 4 Gen 1","ram":8,"hz":120},
+  "Redmi Note 13":{"cpu":"Snapdragon 685","ram":8,"hz":120},
+  "Redmi Note 14":{"cpu":"Dimensity 7025 Ultra","ram":8,"hz":120},
 
+  "POCO X3 Pro":{"cpu":"Snapdragon 860","ram":8,"hz":120},
+  "POCO X5 Pro":{"cpu":"Snapdragon 778G","ram":8,"hz":120},
+  "POCO X6":{"cpu":"Snapdragon 7s Gen 2","ram":12,"hz":120},
+  "POCO X6 Pro":{"cpu":"Dimensity 8300 Ultra","ram":12,"hz":120},
+
+  "POCO F5":{"cpu":"Snapdragon 7+ Gen 2","ram":12,"hz":120},
+  "POCO F6":{"cpu":"Snapdragon 8s Gen 3","ram":12,"hz":120},
+  "POCO F6 Pro":{"cpu":"Snapdragon 8 Gen 2","ram":16,"hz":120},
+
+  "POCO M5":{"cpu":"Helio G99","ram":6,"hz":90},
+  "POCO M6":{"cpu":"Dimensity 6100+","ram":8,"hz":90}
+}
