@@ -1,19 +1,60 @@
-Galaxy A04
-Galaxy A05
-Galaxy A05s
-Galaxy A06
-Galaxy A14
-Galaxy A15
-Galaxy A16
-Galaxy A24
-Galaxy A25
-Galaxy A34
-Galaxy A35
-Galaxy A54
-Galaxy A55
-Galaxy A71
-Galaxy S21
-Galaxy S22
-Galaxy S23
-Galaxy S24
-Galaxy S24 Ultra
+{
+"Samsung A03":{"cpu":"","ram":4,"hz":60},
+"Samsung A03s":{"cpu":"","ram":4,"hz":60},
+"Samsung A04":{"cpu":"","ram":4,"hz":60},
+"Samsung A04e":{"cpu":"","ram":4,"hz":60},
+"Samsung A04s":{"cpu":"","ram":4,"hz":90},
+
+"Samsung A05":{"cpu":"","ram":4,"hz":90},
+"Samsung A05s":{"cpu":"","ram":6,"hz":90},
+"Samsung A06":{"cpu":"","ram":4,"hz":90},
+
+"Samsung A13":{"cpu":"","ram":4,"hz":60},
+"Samsung A14":{"cpu":"","ram":6,"hz":90},
+"Samsung A15":{"cpu":"","ram":8,"hz":90},
+"Samsung A16":{"cpu":"","ram":8,"hz":90},
+
+"Samsung A23":{"cpu":"","ram":6,"hz":90},
+"Samsung A24":{"cpu":"","ram":8,"hz":90},
+"Samsung A25":{"cpu":"","ram":8,"hz":120},
+
+"Samsung A33":{"cpu":"","ram":8,"hz":90},
+"Samsung A34":{"cpu":"","ram":8,"hz":120},
+"Samsung A35":{"cpu":"","ram":8,"hz":120},
+
+"Samsung A53":{"cpu":"","ram":8,"hz":120},
+"Samsung A54":{"cpu":"","ram":8,"hz":120},
+"Samsung A55":{"cpu":"","ram":8,"hz":120},
+
+"Samsung A71":{"cpu":"Snapdragon 730","ram":8,"hz":60},
+"Samsung A73":{"cpu":"","ram":8,"hz":120},
+
+"Samsung M14":{"cpu":"","ram":6,"hz":90},
+"Samsung M15":{"cpu":"","ram":6,"hz":90},
+"Samsung M34":{"cpu":"","ram":8,"hz":120},
+"Samsung M35":{"cpu":"","ram":8,"hz":120},
+
+"Samsung S20 FE":{"cpu":"","ram":8,"hz":120},
+
+"Samsung S21":{"cpu":"","ram":8,"hz":120},
+"Samsung S21 Plus":{"cpu":"","ram":8,"hz":120},
+"Samsung S21 Ultra":{"cpu":"","ram":12,"hz":120},
+
+"Samsung S22":{"cpu":"","ram":8,"hz":120},
+"Samsung S22 Plus":{"cpu":"","ram":8,"hz":120},
+"Samsung S22 Ultra":{"cpu":"","ram":12,"hz":120},
+
+"Samsung S23":{"cpu":"","ram":8,"hz":120},
+"Samsung S23 Plus":{"cpu":"","ram":8,"hz":120},
+"Samsung S23 Ultra":{"cpu":"","ram":12,"hz":120},
+
+"Samsung S24":{"cpu":"","ram":12,"hz":120},
+"Samsung S24 Plus":{"cpu":"","ram":12,"hz":120},
+"Samsung S24 Ultra":{"cpu":"","ram":12,"hz":120},
+
+"Samsung Z Flip5":{"cpu":"","ram":8,"hz":120},
+"Samsung Z Flip6":{"cpu":"","ram":12,"hz":120},
+
+"Samsung Z Fold5":{"cpu":"","ram":12,"hz":120},
+"Samsung Z Fold6":{"cpu":"","ram":12,"hz":120}
+}
