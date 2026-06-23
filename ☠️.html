@@ -9,17 +9,285 @@
 
 <title>GIA HUY × WEB</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+background:#080808;
+
+color:#fff;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:200%;
+
+height:200%;
+
+background:
+repeating-linear-gradient(
+
+120deg,
+
+transparent 0,
+
+transparent 120px,
+
+rgba(255,255,255,.04) 122px,
+
+transparent 124px
+
+);
+
+animation:bg 12s linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes bg{
+
+0%{
+
+transform:
+
+translate(-15%,-15%);
+
+}
+
+100%{
+
+transform:
+
+translate(15%,15%);
+
+}
+
+}
+
+.container{
+
+width:95%;
+
+max-width:850px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:38px;
+
+font-weight:bold;
+
+}
+
+.sub{
+
+text-align:center;
+
+opacity:.7;
+
+margin-top:10px;
+
+}
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:12px;
+
+margin-top:30px;
+
+}
+
+.box{
+
+padding:18px;
+
+text-align:center;
+
+background:
+
+rgba(255,255,255,.05);
+
+border:
+
+1px solid
+
+rgba(255,255,255,.1);
+
+border-radius:20px;
+
+}
+
+.search{
+
+margin-top:20px;
+
+padding:25px;
+
+background:
+
+rgba(255,255,255,.05);
+
+border-radius:25px;
+
+}
+
+input{
+
+width:100%;
+
+padding:18px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:18px;
+
+outline:none;
+
+}
+
+button{
+
+width:100%;
+
+padding:18px;
+
+margin-top:15px;
+
+border:none;
+
+font-size:18px;
+
+border-radius:18px;
+
+cursor:pointer;
+
+}
+
+.result-card{
+
+margin-top:15px;
+
+padding:18px;
+
+border-radius:20px;
+
+background:
+
+rgba(255,255,255,.05);
+
+border:
+
+1px solid
+
+rgba(255,255,255,.1);
+
+}
+
+#history{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-top:15px;
+
+}
+
+.hbtn{
+
+padding:10px;
+
+border-radius:15px;
+
+background:
+
+rgba(255,255,255,.06);
+
+}
+
+audio{
+
+width:100%;
+
+margin-top:20px;
+
+}
+
+footer{
+
+padding:25px;
+
+text-align:center;
+
+opacity:.5;
+
+}
+
+@media(max-width:700px){
+
+.dashboard{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+.title{
+
+font-size:30px;
+
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div id="particles"></div>
+<div class="container">
 
-<header>
-
-<div class="logo">
+<div class="title">
 
 ⚡ GIA HUY × WEB
 
@@ -30,10 +298,6 @@
 FF AI Device Analyzer
 
 </div>
-
-</header>
-
-<main>
 
 <div class="dashboard">
 
@@ -57,7 +321,7 @@ FF AI Device Analyzer
 
 </div>
 
-<div class="search-card">
+<div class="search">
 
 <input
 
@@ -65,11 +329,17 @@ id="phone"
 
 placeholder="📱 Nhập tên điện thoại">
 
-<button id="searchBtn">
+<button
+
+onclick="analyzePhone()">
 
 🚀 PHÂN TÍCH
 
 </button>
+
+<div id="history">
+
+</div>
 
 </div>
 
@@ -77,27 +347,17 @@ placeholder="📱 Nhập tên điện thoại">
 
 </div>
 
-<div class="music-card">
-
-<h3>
+<div class="result-card">
 
 🎵 Nhạc nền
 
-</h3>
-
 <audio controls>
 
-<source
-
-src="nhac.mp3"
-
-type="audio/mpeg">
+<source src="music.mp3">
 
 </audio>
 
 </div>
-
-</main>
 
 <footer>
 
@@ -105,7 +365,331 @@ type="audio/mpeg">
 
 </footer>
 
-<script src="app.js"></script>
+</div>
+
+<script>
+
+const database={
+
+"Samsung A71":{
+
+cpu:"Snapdragon 730",
+
+ram:8,
+
+hz:60
+
+},
+
+"Samsung A55":{
+
+cpu:"Exynos 1480",
+
+ram:8,
+
+hz:120
+
+},
+
+"Samsung S24 Ultra":{
+
+cpu:"Snapdragon 8 Gen 3",
+
+ram:12,
+
+hz:120
+
+},
+
+"POCO X6 Pro":{
+
+cpu:"Dimensity 8300 Ultra",
+
+ram:12,
+
+hz:120
+
+},
+
+"iPhone 13":{
+
+cpu:"Apple A15 Bionic",
+
+ram:4,
+
+hz:60
+
+},
+
+"iPhone 15":{
+
+cpu:"Apple A16 Bionic",
+
+ram:6,
+
+hz:60
+
+}
+
+};
+
+function analyzePhone(){
+
+const phone=
+
+document
+
+.getElementById("phone")
+
+.value.trim();
+
+const result=
+
+document
+
+.getElementById("result");
+
+if(!phone){
+
+return;
+
+}
+
+const data=
+
+database[phone];
+
+saveHistory(phone);
+
+if(!data){
+
+result.innerHTML=
+
+`
+
+<div class="result-card">
+
+❌ Chưa có dữ liệu của ${phone}
+
+</div>
+
+`;
+
+return;
+
+}
+
+let general=190;
+
+let redDot=185;
+
+let scope2=175;
+
+let scope4=165;
+
+let awm=80;
+
+let dpi=520;
+
+let fire=56;
+
+if(data.hz>=120){
+
+general=195;
+
+redDot=190;
+
+scope2=180;
+
+scope4=170;
+
+awm=85;
+
+dpi=560;
+
+fire=52;
+
+}
+
+result.innerHTML=
+
+`
+
+<div class="result-card">
+
+📱 ${phone}
+
+</div>
+
+<div class="result-card">
+
+🧠 CPU: ${data.cpu}
+
+</div>
+
+<div class="result-card">
+
+💾 RAM: ${data.ram}GB
+
+</div>
+
+<div class="result-card">
+
+📺 ${data.hz}Hz
+
+</div>
+
+<div class="result-card">
+
+🎯 Gợi ý độ nhạy
+
+<br><br>
+
+Tổng quan: ${general}
+
+<br>
+
+Red Dot: ${redDot}
+
+<br>
+
+2X: ${scope2}
+
+<br>
+
+4X: ${scope4}
+
+<br>
+
+AWM: ${awm}
+
+</div>
+
+<div class="result-card">
+
+🖱️ DPI: ${dpi}
+
+</div>
+
+<div class="result-card">
+
+🔘 Nút bắn: ${fire}%
+
+</div>
+
+<div class="result-card">
+
+🎮 Setting game
+
+<br><br>
+
+Đồ họa: Mượt
+
+<br>
+
+FPS: Cao
+
+<br>
+
+Bóng đổ: Tắt
+
+</div>
+
+<div class="result-card">
+
+📱 Setting máy
+
+<br><br>
+
+🔕 Không làm phiền: Bật
+
+<br>
+
+🔋 Tắt tiết kiệm pin
+
+<br>
+
+🧹 Đóng ứng dụng nền
+
+</div>
+
+`;
+
+}
+
+function saveHistory(phone){
+
+let arr=
+
+JSON.parse(
+
+localStorage.getItem(
+
+"gh"
+
+)
+
+)||[];
+
+arr=arr.filter(v=>v!==phone);
+
+arr.unshift(phone);
+
+arr=arr.slice(0,5);
+
+localStorage.setItem(
+
+"gh",
+
+JSON.stringify(arr)
+
+);
+
+loadHistory();
+
+}
+
+function loadHistory(){
+
+let arr=
+
+JSON.parse(
+
+localStorage.getItem(
+
+"gh"
+
+)
+
+)||[];
+
+document
+
+.getElementById(
+
+"history"
+
+)
+
+.innerHTML=
+
+arr.map(v=>
+
+`<div class="hbtn"
+
+onclick="document.getElementById('phone').value='${v}'">
+
+${v}
+
+</div>`
+
+).join("");
+
+}
+
+loadHistory();
+
+</script>
 
 </body>
 
