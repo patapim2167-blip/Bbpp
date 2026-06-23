@@ -2,39 +2,69 @@ function showResult(phone,data){
 
 result.innerHTML=`
 
-<div class="result-card">
+<div class="result-card">📱 ${phone}</div>
 
-📱 ${phone}
+<div class="result-card">🎯 Độ nhạy đề xuất<br><br>
 
-</div>
+Tổng quan: 190
 
-<div class="result-card">
+<br>Red Dot:190
 
-🧠 CPU: ${data.cpu}
+<br>2x:180
 
-</div>
+<br>4x:170
 
-<div class="result-card">
+<br>AWM:80
 
-💾 RAM: ${data.ram}
-
-</div>
-
-<div class="result-card">
-
-📺 Màn hình: ${data.hz}
+<br>Nhìn xung quanh:200
 
 </div>
 
 <div class="result-card">
 
-🎯 Cấu hình được đề xuất theo thiết bị.
+🖱️ DPI: 520
 
 </div>
 
 <div class="result-card">
 
-⚙️ Bạn có thể mở rộng dữ liệu sau này.
+🔘 Nút bắn: 56%
+
+</div>
+
+<div class="result-card">
+
+🎮 Setting game
+
+<br><br>
+
+Đồ họa: Mượt
+
+<br>
+
+FPS: Cao
+
+<br>
+
+Độ phân giải: Tiêu chuẩn
+
+</div>
+
+<div class="result-card">
+
+📱 Setting máy
+
+<br><br>
+
+🌡️ Tắt RAM Plus
+
+<br>
+
+🔕 Không làm phiền: Bật
+
+<br>
+
+🔋 Tắt tiết kiệm pin
 
 </div>
 
