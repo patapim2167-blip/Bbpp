@@ -1,115 +1,35 @@
 {
-"Samsung A71":{
-"brand":"Samsung",
-"cpu":"Snapdragon 730",
-"ram":8,
-"hz":60,
-"os":"Android"
-},
+ "devices":[
+  {
+   "brand":"Samsung",
+   "model":"Galaxy A50",
+   "chipset":"Exynos 9610",
+   "ram":4,
+   "tier":"mid"
+  },
 
-"Samsung A55":{
-"brand":"Samsung",
-"cpu":"Exynos 1480",
-"ram":8,
-"hz":120,
-"os":"Android"
-},
+  {
+   "brand":"Samsung",
+   "model":"Galaxy A52",
+   "chipset":"Snapdragon 720G",
+   "ram":6,
+   "tier":"mid"
+  },
 
-"Samsung S24 Ultra":{
-"brand":"Samsung",
-"cpu":"Snapdragon 8 Gen 3",
-"ram":12,
-"hz":120,
-"os":"Android"
-},
+  {
+   "brand":"Xiaomi",
+   "model":"Redmi Note 11",
+   "chipset":"Snapdragon 680",
+   "ram":4,
+   "tier":"mid"
+  },
 
-"Redmi Note 13":{
-"brand":"Redmi",
-"cpu":"Snapdragon 685",
-"ram":8,
-"hz":120,
-"os":"Android"
-},
-
-"POCO X6 Pro":{
-"brand":"POCO",
-"cpu":"Dimensity 8300 Ultra",
-"ram":12,
-"hz":120,
-"os":"Android"
-},
-
-"Realme 12 Pro Plus":{
-"brand":"Realme",
-"cpu":"Snapdragon 7s Gen 2",
-"ram":12,
-"hz":120,
-"os":"Android"
-},
-
-"Vivo V30":{
-"brand":"Vivo",
-"cpu":"Snapdragon 7 Gen 3",
-"ram":12,
-"hz":120,
-"os":"Android"
-},
-
-"Oppo Reno 12":{
-"brand":"Oppo",
-"cpu":"Dimensity 7300",
-"ram":12,
-"hz":120,
-"os":"Android"
-},
-
-"iPhone 11":{
-"brand":"Apple",
-"cpu":"A13 Bionic",
-"ram":4,
-"hz":60,
-"os":"iOS"
-},
-
-"iPhone 12":{
-"brand":"Apple",
-"cpu":"A14 Bionic",
-"ram":4,
-"hz":60,
-"os":"iOS"
-},
-
-"iPhone 13":{
-"brand":"Apple",
-"cpu":"A15 Bionic",
-"ram":4,
-"hz":60,
-"os":"iOS"
-},
-
-"iPhone 14":{
-"brand":"Apple",
-"cpu":"A15 Bionic",
-"ram":6,
-"hz":60,
-"os":"iOS"
-},
-
-"iPhone 15":{
-"brand":"Apple",
-"cpu":"A16 Bionic",
-"ram":6,
-"hz":60,
-"os":"iOS"
-},
-
-"iPhone 16":{
-"brand":"Apple",
-"cpu":"A18",
-"ram":8,
-"hz":60,
-"os":"iOS"
+  {
+   "brand":"Apple",
+   "model":"iPhone 11",
+   "chipset":"Apple A13",
+   "ram":4,
+   "tier":"high"
+  }
+ ]
 }
-}
-
-
